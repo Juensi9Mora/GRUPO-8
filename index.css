@@ -1,8 +1,7 @@
-﻿/* Estilos Generales y Fondo */
-body {
+﻿body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #fdf5e6; /* Color cálido/pastel */
+    background-color: #fdf5e6; 
     color: #333;
 }
 

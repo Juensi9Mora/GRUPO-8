@@ -1,1 +1,66 @@
-﻿
+/* Página de Contacto */
+.seccion-dividida {
+    align-items: flex-start;
+}
+
+.dato-contacto {
+    background-color: #faedcd;
+    border-left: 4px solid #d4a373;
+    padding: 12px 15px;
+    border-radius: 5px;
+}
+
+.formulario-der {
+    flex: 1;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.formulario-contacto label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    font-family: inherit;
+    font-size: 1em;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #d4a373;
+    border-radius: 5px;
+    background-color: #fefae0;
+    color: #333;
+}
+
+.formulario-contacto textarea {
+    resize: vertical;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+    outline: 2px solid #d4a373;
+    background-color: white;
+}
+
+.formulario-contacto button {
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #d4a373;
+    color: #333;
+    cursor: pointer;
+}
+
+.formulario-contacto button:hover {
+    background-color: #e0b589;
+}

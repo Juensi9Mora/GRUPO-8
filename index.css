@@ -6,30 +6,7 @@ body {
     color: #333;
 }
 
-/* Menú de Navegación Fijo[cite: 4, 5] */
-nav {
-    position: sticky;
-    top: 0;
-    background-color: #d4a373;
-    padding: 15px;
-    display: flex;
-    justify-content: space-around;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    z-index: 1000;
-}
 
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1.1em;
-}
-
-nav a:hover {
-    color: #fefae0;
-}
-
-/* Estructura: Texto a la izquierda, imagen a la derecha */
 .seccion-dividida {
     display: flex;
     align-items: center;
@@ -54,12 +31,3 @@ nav a:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* Footer[cite: 4] */
-footer {
-    background-color: #faedcd;
-    color: #555;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    border-top: 2px solid #d4a373;
-}

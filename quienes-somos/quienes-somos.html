@@ -1,1 +1,36 @@
-﻿
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Compañeros de Vida</title>
+    <link rel="stylesheet" href="../navbar/navbar.css">
+    <link rel="stylesheet" href="../footer/footer.css">
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+    <header id="navbar-container"></header>
+
+
+    <main class="seccion-dividida">
+        <div class="texto-izq">
+            <h1>Quienes somos</h1>
+        </div>
+    </main>
+        <div id="footer-container"></div>
+    <script>
+        fetch('../navbar/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+            fetch('../footer/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+
+    </script>
+
+</body>
+</html>

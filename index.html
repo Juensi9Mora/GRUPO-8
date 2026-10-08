@@ -4,40 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - Compañeros de Vida</title>
-    <link rel="stylesheet" href="navbar/navbar.css">
-    <link rel="stylesheet" href="footer/footer.css">
-    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
 </head>
 <body>
-    <header id="navbar-container"></header>
-
-
-    <main class="seccion-dividida">
-        <div class="texto-izq">
-            <h1>Bienvenidos a Compañeros de Vida</h1>
-            <h2>Dale una segunda oportunidad a un peludito</h2>
-            <h3>Nuestra Misión en los Albergues</h3>
-            <p>Buscamos dar visibilidad a los animales rescatados que se encuentran en hogares de paso o refugios. Cada adopción salva una vida y abre espacio para rescatar a otro animal necesitado.</p>
-            <p>¡Conoce a nuestros rescatados y enamórate!</p>
+    <nav class="navbar navbar-expand-lg navbar-compania sticky-top">
+        <div class="container">
+            <a class="navbar-brand fs-4 fw-bolder" href="index.html">Compañeros de Vida</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="quienes-somos.html">Sobre Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contáctanos</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="imagen-der">
-            <img src="/img/perito-inicio.png" alt="Perro pidiendo un hogar de paso">
+    </nav>
+    <div class="container mt-4">
+        <div class="row">
+            <aside class="col-md-2 columna-reservada">
+                <!-- Publicidad futura -->
+            </aside>
+
+            <main class="col-md-8">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6">
+                        <h1 class="display-6">Bienvenidos a Compañeros de Vida</h1>
+                        <h2 class="h4">Dale una segunda oportunidad a un peludito</h2>
+                        <p class="lead">Buscamos dar visibilidad a los animales rescatados que están en hogares de paso o refugios.</p>
+                        <p>Cada adopción salva una vida y abre espacio para rescatar a otro animal que lo necesita. ¡Conoce a nuestros rescatados y enamórate!</p>
+                        <a href="contacto.html" class="btn btn-compania btn-lg">Quiero adoptar</a>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <img src="img/perito-inicio.png" class="img-fluid img-redondeada" alt="Perro pidiendo un hogar de paso">
+                    </div>
+                </div>
+
+                <h2 class="h4 mt-5 mb-3">Nuestra misión en los albergues</h2>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="tarjeta-compania p-3 h-100">
+                            <h3 class="h5">Rescatar</h3>
+                            <p class="mb-0">Sacamos a los perritos de la calle, el abandono o el maltrato.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="tarjeta-compania p-3 h-100">
+                            <h3 class="h5">Cuidar</h3>
+                            <p class="mb-0">Les damos atención médica, alimento y cariño en hogares de paso.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="tarjeta-compania p-3 h-100">
+                            <h3 class="h5">Adoptar</h3>
+                            <p class="mb-0">Los conectamos con una familia que los cuide para siempre.</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <aside class="col-md-2 columna-reservada">
+                <!-- Noticias futuras -->
+            </aside>
         </div>
-    </main>
-        <div id="footer-container"></div>
-    <script>
-        fetch('navbar/navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar-container').innerHTML = data;
-            });
-            fetch('footer/footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-container').innerHTML = data;
-            });
+    </div>
 
-    </script>
+    <footer class="footer-compania py-4">
+        <div class="container">
+            <h2 class="h5 mb-3">Proyecto: Compañeros de Vida</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-2 small">
+                <div class="col">Ángela Lara<br><a href="mailto:angela.lara@companerosdevida.example">angela.lara@companerosdevida.example</a></div>
+                <div class="col">Carolayn Mora<br><a href="mailto:carolayn.mora@companerosdevida.example">carolayn.mora@companerosdevida.example</a></div>
+                <div class="col">Kevin Holguín<br><a href="mailto:kevin.holguin@companerosdevida.example">kevin.holguin@companerosdevida.example</a></div>
+                <div class="col">Amanda Carolina Chindoy<br><a href="mailto:amanda.chindoy@companerosdevida.example">amanda.chindoy@companerosdevida.example</a></div>
+            </div>
+        </div>
+    </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

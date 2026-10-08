@@ -1,55 +1,145 @@
-﻿body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #fdf5e6; 
-    color: #333;
+﻿/* Paleta (5 colores): crema, durazno, café claro, café oscuro, gris texto */
+:root {
+    --crema: #fdf5e6;
+    --durazno: #faedcd;
+    --cafe-claro: #d4a373;
+    --cafe-oscuro: #bc6c25;
+    --texto: #333333;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--crema);
+    color: var(--texto);
+    margin: 0;
+}
 
-.seccion-dividida {
+/* Evita que la barra fija tape el título al navegar a una sección. */
+.seccion-pagina {
+    scroll-margin-top: 5rem;
+}
+
+/* Navbar */
+.navbar-compania {
+    background-color: var(--cafe-claro);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-compania .navbar-brand,
+.navbar-compania .nav-link {
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-compania .nav-link:hover,
+.navbar-compania .nav-link.active {
+    color: var(--crema);
+}
+
+.navbar-compania .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Columnas laterales reservadas (publicidad / noticias) */
+.columna-reservada {
+    min-height: 100px;
+}
+
+/* Contenido */
+.btn-compania {
+    background-color: var(--cafe-claro);
+    border-color: var(--cafe-claro);
+    color: var(--texto);
+    font-weight: bold;
+}
+
+.btn-compania:hover,
+.btn-compania:focus {
+    background-color: var(--cafe-oscuro);
+    border-color: var(--cafe-oscuro);
+    color: #fff;
+}
+
+.tarjeta-compania {
+    background-color: var(--durazno);
+    border-left: 4px solid var(--cafe-claro);
+    border-radius: 8px;
+}
+
+.img-redondeada {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer-compania {
+    width: 100%;
+    min-height: 220px;
+    background-color: #4c4541;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+
+.footer-compania a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-compania a:hover {
+    text-decoration: underline;
+}
+
+.footer-column {
+    min-height: 160px;
+}
+
+.footer-compania .publicidad {
     display: flex;
     align-items: center;
-    padding: 40px;
-    max-width: 1000px;
-    margin: 0 auto;
+    justify-content: center;
 }
 
-.texto-izq {
-    flex: 1;
-    padding-right: 30px;
-}
-
-.imagen-der {
-    flex: 1;
+.footer-compania .informacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.imagen-der img {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+.footer-compania .contacto h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 1.25rem;
 }
 
-.footer { width: 100%; min-height: 220px; background-color: #4C4541; color: white; display: grid; grid-template-columns: 1fr 2fr 1fr; align-items: center; padding: 30px 0; box-sizing: border-box; }
+.footer-compania .contacto p {
+    margin: 12px 0;
+    line-height: 1.5;
+}
 
-.footer-column { min-height: 160px; }
+.footer-compania .contacto strong {
+    color: #fff;
+}
 
-.publicidad { display: flex; align-items: center; justify-content: center; }
+@media (max-width: 768px) {
+    .footer-compania {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 
-.informacion { display: flex; justify-content: center; align-items: center; text-align: center; border-left: 1px solid rgba(255, 255, 255, 0.2); border-right: 1px solid rgba(255, 255, 255, 0.2); }
+    .footer-compania .publicidad {
+        display: none;
+    }
 
-.contacto h3 { margin-top: 0; margin-bottom: 20px; color: white; }
-
-.contacto p { margin: 12px 0; line-height: 1.5; }
-
-.contacto strong { color: white; }
-
-.contacto a { color: white; text-decoration: none; }
-
-.contacto a:hover { text-decoration: underline; }
-
-@media (max-width: 768px) { .footer { grid-template-columns: 1fr; gap: 20px; }
-
-.publicidad { display: none; }
-
-.informacion { border-left: none; border-right: none; } }
+    .footer-compania .informacion {
+        border-left: none;
+        border-right: none;
+    }
+}

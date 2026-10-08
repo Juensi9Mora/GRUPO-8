@@ -1,165 +1,143 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inicio - Compañeros de Vida</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
-    <link href="/styles.css" rel="stylesheet" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compañeros de Vida</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
     <nav class="navbar navbar-expand-lg navbar-compania sticky-top">
-      <div class="container">
-        <a class="navbar-brand fs-4 fw-bolder" href="index.html"
-          >Compañeros de Vida</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#menuPrincipal"
-          aria-controls="menuPrincipal"
-          aria-expanded="false"
-          aria-label="Abrir menú"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="menuPrincipal">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html" aria-current="page"
-                >Inicio</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="quienes-somos.html">Sobre Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contáctanos</a>
-            </li>
-          </ul>
+        <div class="container">
+            <a class="navbar-brand fs-4 fw-bolder" href="#inicio">Compañeros de Vida</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio" aria-current="page">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contáctanos</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
-    <div class="container mt-4">
-      <div class="row">
-        <aside class="col-md-2 columna-reservada">
-          <!-- Publicidad futura -->
-        </aside>
 
-        <main class="col-md-8">
-          <div class="row align-items-center g-4">
-            <div class="col-lg-6">
-              <h1 class="display-6">Bienvenidos a Compañeros de Vida</h1>
-              <h2 class="h4">Dale una segunda oportunidad a un peludito</h2>
-              <p class="lead">
-                Buscamos dar visibilidad a los animales rescatados que están en
-                hogares de paso o refugios.
-              </p>
-              <p>
-                Cada adopción salva una vida y abre espacio para rescatar a otro
-                animal que lo necesita. ¡Conoce a nuestros rescatados y
-                enamórate!
-              </p>
-              <a href="contacto.html" class="btn btn-compania btn-lg"
-                >Quiero adoptar</a
-              >
-            </div>
-            <div class="col-lg-6 text-center">
-              <img
-                src="img/perito-inicio.png"
-                class="img-fluid img-redondeada"
-                alt="Perro pidiendo un hogar de paso"
-              />
-            </div>
-          </div>
+    <main>
+        <section id="inicio" class="container mt-4 seccion-pagina">
+            <div class="row">
+                <aside class="col-md-2 columna-reservada" aria-hidden="true"></aside>
+                <div class="col-md-8">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-6">
+                            <h1 class="display-6">Bienvenidos a Compañeros de Vida</h1>
+                            <h2 class="h4">Dale una segunda oportunidad a un peludito</h2>
+                            <p class="lead">Buscamos dar visibilidad a los animales rescatados que están en hogares de paso o refugios.</p>
+                            <p>Cada adopción salva una vida y abre espacio para rescatar a otro animal que lo necesita. ¡Conoce a nuestros rescatados y enamórate!</p>
+                            <a href="#contacto" class="btn btn-compania btn-lg">Quiero adoptar</a>
+                        </div>
+                        <div class="col-lg-6 text-center">
+                            <img src="img/perito-inicio.png" class="img-fluid img-redondeada" alt="Perro buscando un hogar">
+                        </div>
+                    </div>
 
-          <h2 class="h4 mt-5 mb-3">Nuestra misión en los albergues</h2>
-          <div class="row g-3">
-            <div class="col-md-4">
-              <div class="tarjeta-compania p-3 h-100">
-                <h3 class="h5">Rescatar</h3>
-                <p class="mb-0">
-                  Sacamos a los perritos de la calle, el abandono o el maltrato.
-                </p>
-              </div>
+                    <h2 class="h4 mt-5 mb-3">Nuestra misión en los albergues</h2>
+                    <div class="row g-3">
+                        <div class="col-md-4"><div class="tarjeta-compania p-3 h-100"><h3 class="h5">Rescatar</h3><p class="mb-0">Sacamos a los perritos de la calle, el abandono o el maltrato.</p></div></div>
+                        <div class="col-md-4"><div class="tarjeta-compania p-3 h-100"><h3 class="h5">Cuidar</h3><p class="mb-0">Les damos atención médica, alimento y cariño en hogares de paso.</p></div></div>
+                        <div class="col-md-4"><div class="tarjeta-compania p-3 h-100"><h3 class="h5">Adoptar</h3><p class="mb-0">Los conectamos con una familia que los cuide para siempre.</p></div></div>
+                    </div>
+                </div>
+                <aside class="col-md-2 columna-reservada" aria-hidden="true"></aside>
             </div>
-            <div class="col-md-4">
-              <div class="tarjeta-compania p-3 h-100">
-                <h3 class="h5">Cuidar</h3>
-                <p class="mb-0">
-                  Les damos atención médica, alimento y cariño en hogares de
-                  paso.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="tarjeta-compania p-3 h-100">
-                <h3 class="h5">Adoptar</h3>
-                <p class="mb-0">
-                  Los conectamos con una familia que los cuide para siempre.
-                </p>
-              </div>
-            </div>
-          </div>
-        </main>
+        </section>
 
-        <aside class="col-md-2 columna-reservada">
-          <!-- Noticias futuras -->
-        </aside>
-      </div>
-    </div>
+        <section id="sobre-nosotros" class="container mt-5 seccion-pagina">
+            <div class="row">
+                <aside class="col-md-2 columna-reservada" aria-hidden="true"></aside>
+                <div class="col-md-8">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-7">
+                            <h2 class="display-6">Quiénes somos</h2>
+                            <p class="lead">Nacemos de una convicción simple pero poderosa: todos los perros merecen una vida con amor, dignidad y un hogar donde los cuiden.</p>
+                            <p>Somos un grupo de amantes de los animales, voluntarios y aliados dedicados al rescate, rehabilitación y reubicación de perritos en situación de calle, abandono o maltrato. Les brindamos atención médica, nutrición y el cuidado afectivo que necesitan para sanar física y emocionalmente.</p>
+                        </div>
+                        <div class="col-lg-5 text-center">
+                            <img src="img/pexels-christopher-welsch-leveroni-2150186467-32438131.jpg" class="img-fluid img-redondeada" alt="Equipo de Compañeros de Vida trabajando por los animales">
+                        </div>
+                    </div>
+                    <div class="row g-3 mt-4">
+                        <div class="col-md-6"><div class="tarjeta-compania p-3 h-100"><h3 class="h5">Nuestra misión</h3><p class="mb-0">Transformar vidas mediante el rescate responsable, la sensibilización de la comunidad y la búsqueda de familias idóneas que les aseguren una segunda oportunidad llena de amor y bienestar.</p></div></div>
+                        <div class="col-md-6"><div class="tarjeta-compania p-3 h-100"><h3 class="h5">Nuestra visión</h3><p class="mb-0">Ser un puente sólido e integral de adopción y protección animal, fomentando la tenencia responsable y reduciendo el abandono y la sobrepoblación en las calles.</p></div></div>
+                    </div>
+                    <h3 class="h4 mt-5 mb-3">¿Cómo trabajamos?</h3>
+                    <div class="row g-3">
+                        <div class="col-md-6"><div class="tarjeta-compania p-3 h-100"><h4 class="h5">Hogares de paso y rehabilitación</h4><p class="mb-0">Acompañamos su adaptación y socialización en espacios seguros antes de su adopción final.</p></div></div>
+                        <div class="col-md-6"><div class="tarjeta-compania p-3 h-100"><h4 class="h5">Adopciones responsables</h4><p class="mb-0">Conectamos a cada peludo con la familia ideal mediante un proceso transparente y enfocado en su bienestar.</p></div></div>
+                    </div>
+                </div>
+                <aside class="col-md-2 columna-reservada" aria-hidden="true"></aside>
+            </div>
+        </section>
 
-    
-      <footer class="footer">
-        <div class="footer-column publicidad">Publicidad</div>
+        <section id="contacto" class="container mt-5 seccion-pagina">
+            <div class="row">
+                <aside class="col-md-2 columna-reservada" aria-hidden="true"></aside>
+                <div class="col-md-8">
+                    <h2 class="display-6">Contáctanos</h2>
+                    <p class="lead">¿Quieres adoptar, ser hogar de paso o apoyar a un albergue? Escríbenos y te responderemos lo antes posible.</p>
+                    <div id="alerta-contacto" aria-live="polite"></div>
+                    <form id="formulario-contacto" class="tarjeta-compania p-4">
+                        <div class="mb-3">
+                            <label for="correo" class="form-label fw-bold">Correo electrónico</label>
+                            <input type="email" class="form-control" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label fw-bold">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos en qué podemos ayudarte" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-compania btn-lg">Enviar mensaje</button>
+                    </form>
+                </div>
+                <aside class="col-md-2 columna-reservada" aria-hidden="true"></aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer footer-compania mt-5">
+        <div class="footer-column publicidad" aria-label="Espacio para publicidad">Publicidad</div>
 
         <div class="footer-column informacion">
-          <div class="contacto">
-            <h3>Información de contacto</h3>
-
-            <p>
-              <strong>Ángela Lara</strong><br />
-              <a href="angela.lara@companerosdevida.com">
-                angela.lara@companerosdevida.com
-              </a>
-            </p>
-
-            <p>
-              <strong>Carolayn Mora</strong><br />
-              <a href="carolayn.mora@companerosdevida.com">
-                carolayn.mora@companerosdevida.com
-              </a>
-            </p>
-
-            <p>
-              <strong>Kevin Holguín</strong><br />
-              <a href="kevin.holguin@companerosdevida.com">
-                kevin.holguin@companerosdevida.com
-              </a>
-            </p>
-
-            <p>
-              <strong>Amanda Carolina Chindoy</strong><br />
-              <a href="amanda.chindoy@companerosdevida.com">
-                amanda.chindoy@companerosdevida.com
-              </a>
-            </p>
-
-          </div>
+            <div class="contacto">
+                <h2>Información de contacto</h2>
+                <p><strong>Ángela Lara</strong><br><a href="mailto:angela.lara@companerosdevida.com">angela.lara@companerosdevida.com</a></p>
+                <p><strong>Carolayn Mora</strong><br><a href="mailto:carolayn.mora@companerosdevida.com">carolayn.mora@companerosdevida.com</a></p>
+                <p><strong>Kevin Holguín</strong><br><a href="mailto:kevin.holguin@companerosdevida.com">kevin.holguin@companerosdevida.com</a></p>
+                <p><strong>Amanda Carolina Chindoy</strong><br><a href="mailto:amanda.chindoy@companerosdevida.com">amanda.chindoy@companerosdevida.com</a></p>
+            </div>
         </div>
 
-        <div class="footer-column publicidad">Publicidad</div>
-      </footer>
-    
+        <div class="footer-column publicidad" aria-label="Espacio para publicidad">Publicidad</div>
+    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        const formulario = document.getElementById('formulario-contacto');
+        formulario.addEventListener('submit', function (event) {
+            event.preventDefault();
+            document.getElementById('alerta-contacto').innerHTML =
+                '<div class="alert alert-success alert-dismissible fade show" role="alert">' +
+                'Mensaje enviado' +
+                '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>' +
+                '</div>';
+            formulario.reset();
+        });
+    </script>
+</body>
 </html>

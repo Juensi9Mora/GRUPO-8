@@ -30,3 +30,26 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+.footer { width: 100%; min-height: 220px; background-color: #4C4541; color: white; display: grid; grid-template-columns: 1fr 2fr 1fr; align-items: center; padding: 30px 0; box-sizing: border-box; }
+
+.footer-column { min-height: 160px; }
+
+.publicidad { display: flex; align-items: center; justify-content: center; }
+
+.informacion { display: flex; justify-content: center; align-items: center; text-align: center; border-left: 1px solid rgba(255, 255, 255, 0.2); border-right: 1px solid rgba(255, 255, 255, 0.2); }
+
+.contacto h3 { margin-top: 0; margin-bottom: 20px; color: white; }
+
+.contacto p { margin: 12px 0; line-height: 1.5; }
+
+.contacto strong { color: white; }
+
+.contacto a { color: white; text-decoration: none; }
+
+.contacto a:hover { text-decoration: underline; }
+
+@media (max-width: 768px) { .footer { grid-template-columns: 1fr; gap: 20px; }
+
+.publicidad { display: none; }
+
+.informacion { border-left: none; border-right: none; } }

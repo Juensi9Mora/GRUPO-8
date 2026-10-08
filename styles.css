@@ -1,55 +1,83 @@
-﻿/* Paleta (5 colores): crema, durazno, café claro, café oscuro, gris texto */
+﻿/* Importar fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap');
+
+/* Paleta de colores solicitada */
 :root {
-    --crema: #fdf5e6;
-    --durazno: #faedcd;
-    --cafe-claro: #d4a373;
-    --cafe-oscuro: #bc6c25;
-    --texto: #333333;
+    --beige: #FCF0DA;
+    --verde: #AEAC78;
+    --amarillo: #F2C46A;
+    --cafe-oscuro: #4C4541;
+    --texto-general: #333333;
 }
 
+/* Base de la página (Texto Normal) */
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--crema);
-    color: var(--texto);
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--beige);
+    color: var(--texto-general);
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Previene scroll horizontal indeseado */
 }
 
-/* Evita que la barra fija tape el título al navegar a una sección. */
-.seccion-pagina {
-    scroll-margin-top: 5rem;
+/* Títulos principales */
+h1, h2, .display-6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--cafe-oscuro);
+}
+
+/* Subtítulos */
+h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: var(--verde);
 }
 
 /* Navbar */
 .navbar-compania {
-    background-color: var(--cafe-claro);
+    background-color: var(--cafe-oscuro);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-compania .navbar-brand,
 .navbar-compania .nav-link {
-    color: #fff;
-    font-weight: bold;
+    color: var(--beige);
+    font-family: 'Montserrat', sans-serif;
 }
 
 .navbar-compania .nav-link:hover,
 .navbar-compania .nav-link.active {
-    color: var(--crema);
+    color: var(--amarillo);
+    font-weight: bold;
 }
 
 .navbar-compania .navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.7);
+    border-color: var(--beige);
+    background-color: var(--beige);
 }
 
-/* Columnas laterales reservadas (publicidad / noticias) */
+/* Columnas laterales reservadas (Grid lateral) */
 .columna-reservada {
-    min-height: 100px;
+    background-color: rgba(174, 172, 120, 0.1); /* Verde transparente */
+    border: 1px dashed var(--verde);
+    padding: 20px;
+    text-align: center;
+    color: var(--cafe-oscuro);
+    font-size: 0.9rem;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Contenido */
+/* Botones */
 .btn-compania {
-    background-color: var(--cafe-claro);
-    border-color: var(--cafe-claro);
-    color: var(--texto);
+    background-color: var(--verde);
+    border-color: var(--verde);
+    color: var(--beige);
     font-weight: bold;
 }
 
@@ -57,13 +85,15 @@ body {
 .btn-compania:focus {
     background-color: var(--cafe-oscuro);
     border-color: var(--cafe-oscuro);
-    color: #fff;
+    color: var(--amarillo);
 }
 
+/* Tarjetas */
 .tarjeta-compania {
-    background-color: var(--durazno);
-    border-left: 4px solid var(--cafe-claro);
+    background-color: #ffffff;
+    border-top: 4px solid var(--amarillo);
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .img-redondeada {
@@ -71,75 +101,22 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
+/* Footer (Forzado al fondo y ancho completo) */
 .footer-compania {
-    width: 100%;
-    min-height: 220px;
-    background-color: #4c4541;
-    color: #fff;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: center;
-    padding: 30px 0;
-    box-sizing: border-box;
+    background-color: var(--cafe-oscuro);
+    color: var(--beige);
+    padding: 40px 0 20px 0;
+    margin-top: auto; /* Empuja el footer al final de la pantalla */
+    width: 100%; /* Garantiza que ocupe todo el ancho */
+    flex-shrink: 0;
 }
 
 .footer-compania a {
-    color: #fff;
+    color: var(--amarillo);
     text-decoration: none;
 }
 
 .footer-compania a:hover {
+    color: var(--verde);
     text-decoration: underline;
-}
-
-.footer-column {
-    min-height: 160px;
-}
-
-.footer-compania .publicidad {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.footer-compania .informacion {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.footer-compania .contacto h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #fff;
-    font-size: 1.25rem;
-}
-
-.footer-compania .contacto p {
-    margin: 12px 0;
-    line-height: 1.5;
-}
-
-.footer-compania .contacto strong {
-    color: #fff;
-}
-
-@media (max-width: 768px) {
-    .footer-compania {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .footer-compania .publicidad {
-        display: none;
-    }
-
-    .footer-compania .informacion {
-        border-left: none;
-        border-right: none;
-    }
 }

@@ -1,15 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Compañeros de Vida</title>
-    <!-- Bootstrap CSS -->
+    <title>Contáctanos - Compañeros de Vida</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-compania sticky-top">
         <div class="container">
             <a class="navbar-brand fs-4 fw-bolder" href="index.html">Compañeros de Vida</a>
@@ -18,70 +16,50 @@
             </button>
             <div class="collapse navbar-collapse" id="menuPrincipal">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contactanos.html">Contáctanos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contactanos.html">Contáctanos</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Contenedor Principal (Grid) -->
     <div class="container mt-5 mb-5">
         <div class="row">
-            <!-- Columna Izquierda: Publicidad -->
             <div class="col-md-2 d-none d-md-flex columna-reservada">
                 <p>Espacio para Publicidad futura</p>
             </div>
             
-            <!-- Columna Central: Contenido -->
             <div class="col-md-8">
                 <main>
-                    <div class="row align-items-center g-4">
-                        <div class="col-lg-6">
-                            <h1 class="display-6">Bienvenidos a Compañeros de Vida</h1>
-                            <h2 class="h4">Dale una segunda oportunidad a un peludito</h2>
-                            <p class="lead">Buscamos dar visibilidad a los animales rescatados que están en hogares de paso o refugios.</p>
-                            <p>Cada adopción salva una vida y abre espacio para rescatar a otro animal que lo necesita. ¡Conoce a nuestros rescatados y enamórate!</p>
-                            <a href="contactanos.html" class="btn btn-compania btn-lg mt-2">Quiero adoptar</a>
+                    <h1 class="display-6 text-center">Contáctanos</h1>
+                    <p class="lead text-center mb-4">¿Quieres adoptar, ser hogar de paso o apoyar a un albergue? Escríbenos y te responderemos lo antes posible.</p>
+                    
+                    <!-- Espacio donde se mostrará la alerta de envío -->
+                    <div id="alerta-contacto" aria-live="polite"></div>
+                    
+                    <form id="formulario-contacto" class="tarjeta-compania p-4 mx-auto" style="max-width: 600px;">
+                        <div class="mb-3">
+                            <label for="correo" class="form-label fw-bold" style="color: var(--cafe-oscuro)">Correo electrónico</label>
+                            <input type="email" class="form-control" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
                         </div>
-                        <div class="col-lg-6 text-center">
-                            <img src="img/perito-inicio.png" class="img-fluid img-redondeada" alt="Perro buscando un hogar">
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label fw-bold" style="color: var(--cafe-oscuro)">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos en qué podemos ayudarte..." required></textarea>
                         </div>
-                    </div>
-
-                    <h2 class="h4 mt-5 mb-3 text-center">Nuestra misión en los albergues</h2>
-                    <div class="row g-3">
-                        <div class="col-md-4">
-                            <div class="tarjeta-compania p-3 h-100 text-center">
-                                <h3 class="h5">Rescatar</h3>
-                                <p class="mb-0">Sacamos a los perritos de la calle, el abandono o el maltrato.</p>
-                            </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-compania btn-lg">Enviar mensaje</button>
                         </div>
-                        <div class="col-md-4">
-                            <div class="tarjeta-compania p-3 h-100 text-center">
-                                <h3 class="h5">Cuidar</h3>
-                                <p class="mb-0">Les damos atención médica, alimento y cariño en hogares de paso.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="tarjeta-compania p-3 h-100 text-center">
-                                <h3 class="h5">Adoptar</h3>
-                                <p class="mb-0">Los conectamos con una familia que los cuide para siempre.</p>
-                            </div>
-                        </div>
-                    </div>
+                    </form>
                 </main>
             </div>
 
-            <!-- Columna Derecha: Noticias -->
             <div class="col-md-2 d-none d-md-flex columna-reservada">
                 <p>Espacio para Noticias futuras</p>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="footer-compania">
         <div class="container text-center">
             <h3 class="h5 text-white mb-4">Información de contacto del equipo</h3>
@@ -106,7 +84,20 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script de Bootstrap para la Alerta en Vivo -->
+    <script>
+        const formulario = document.getElementById('formulario-contacto');
+        formulario.addEventListener('submit', function (event) {
+            event.preventDefault();
+            document.getElementById('alerta-contacto').innerHTML =
+                '<div class="alert alert-success alert-dismissible fade show" role="alert" style="background-color: var(--verde); color: var(--beige); border: none;">' +
+                '<strong>¡Mensaje enviado con éxito!</strong> Estaremos en contacto pronto.' +
+                '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>' +
+                '</div>';
+            formulario.reset();
+        });
+    </script>
 </body>
 </html>
